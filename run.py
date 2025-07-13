@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import time
 import matplotlib.pyplot as plt
-import seaborn as ins
+import seaborn as sns
 
 # --- Page Configuration ---
 st.set_page_config(
