@@ -17,10 +17,12 @@ st.set_page_config(
 def load_model():
     """A function to load the model to avoid reloading it on every interaction."""
     try:
+        st.write("🔍 Attempting to load model...")
         model = joblib.load('churn_model.joblib')
+        st.success("✅ Model loaded successfully.")
         return model
-    except FileNotFoundError:
-        st.error("Model file not found. Please make sure 'churn_model.joblib' is in the same directory as this script.")
+    except Exception as e:
+        st.error(f"❌ Model load failed: {type(e).__name__} – {e}")
         return None
 
 model = load_model()
