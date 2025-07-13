@@ -1,7 +1,3 @@
-import matplotlib
-# This MUST be done before importing pyplot
-matplotlib.use('Agg')
-
 import streamlit as st
 import pandas as pd
 import joblib
@@ -30,9 +26,11 @@ def load_model():
 model = load_model()
 
 # --- Feature Importance Function ---
+@st.cache_data # <-- THE FIX: Cache the plot generation
 def plot_feature_importance(model):
     """
     Extracts and plots the feature importances from the trained pipeline.
+    This function is cached to prevent re-running on every interaction.
     """
     try:
         preprocessor = model.named_steps['preprocessor']
