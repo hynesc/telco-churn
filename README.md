@@ -55,7 +55,7 @@ To run this project on your local machine, follow these steps:
 
 1.  **Clone the Repository**:
     ```bash
-    git clone [https://github.com/hynesc/telco-churn](https://github.com/hynesc/telco-churn)
+    git clone https://github.com/hynesc/telco-churn
     cd telco-churn
     ```
 
