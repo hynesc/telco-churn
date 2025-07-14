@@ -2,6 +2,11 @@
 
 This project demonstrates a complete machine learning workflow for predicting customer churn. It involves data cleaning, model training, feature importance analysis, and deployment of an interactive web application using Streamlit.
 
+## Live Application
+
+You can view the deployed interactive application here:
+**[https://telco-churn-analysis.streamlit.app/](https://telco-churn-analysis.streamlit.app/)**
+
 ## 1. Problem Statement
 
 The goal of this project is to build a model that can predict which customers of a telecom company are most likely to "churn" (cancel their subscription). By identifying these at-risk customers, the business can proactively offer incentives or support to retain them, which is often more cost-effective than acquiring new customers.
@@ -50,7 +55,7 @@ To run this project on your local machine, follow these steps:
 
 1.  **Clone the Repository**:
     ```bash
-    git clone https://github.com/hynesc/telco-churn
+    git clone [https://github.com/hynesc/telco-churn](https://github.com/hynesc/telco-churn)
     cd telco-churn
     ```
 
