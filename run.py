@@ -88,10 +88,8 @@ if model:
     # --- Input Fields for Customer Data ---
     with col1:
         st.header("Customer Demographics")
-        gender = st.selectbox("Gender", ('Male', 'Female'))
         senior_citizen_radio = st.radio("Senior Citizen", ('No', 'Yes'), horizontal=True)
         senior_citizen = 1 if senior_citizen_radio == 'Yes' else 0
-        partner = st.radio("Has a Partner?", ('No', 'Yes'), horizontal=True)
         dependents = st.radio("Has Dependents?", ('No', 'Yes'), horizontal=True)
 
     with col2:
@@ -109,7 +107,6 @@ if model:
     col3, col4, col5 = st.columns(3)
 
     with col3:
-        phone_service = st.selectbox("Phone Service", ('Yes', 'No'))
         multiple_lines = st.selectbox("Multiple Lines", ('No', 'Yes', 'No phone service'))
         internet_service = st.selectbox("Internet Service", ('DSL', 'Fiber optic', 'No'))
 
@@ -126,14 +123,21 @@ if model:
     # --- Prediction Logic ---
     if st.button("Predict Churn", type="primary", use_container_width=True):
         input_data = pd.DataFrame({
-            'gender': [gender], 'SeniorCitizen': [senior_citizen], 'Partner': [partner],
-            'Dependents': [dependents], 'tenure': [tenure], 'PhoneService': [phone_service],
-            'MultipleLines': [multiple_lines], 'InternetService': [internet_service],
-            'OnlineSecurity': [online_security], 'OnlineBackup': [online_backup],
-            'DeviceProtection': [device_protection], 'TechSupport': [tech_support],
-            'StreamingTV': [streaming_tv], 'StreamingMovies': [streaming_movies],
-            'Contract': [contract], 'PaperlessBilling': [paperless_billing],
-            'PaymentMethod': [payment_method], 'MonthlyCharges': [monthly_charges],
+            'SeniorCitizen': [senior_citizen],
+            'Dependents': [dependents],
+            'tenure': [tenure],
+            'MultipleLines': [multiple_lines],
+            'InternetService': [internet_service],
+            'OnlineSecurity': [online_security],
+            'OnlineBackup': [online_backup],
+            'DeviceProtection': [device_protection],
+            'TechSupport': [tech_support],
+            'StreamingTV': [streaming_tv],
+            'StreamingMovies': [streaming_movies],
+            'Contract': [contract],
+            'PaperlessBilling': [paperless_billing],
+            'PaymentMethod': [payment_method],
+            'MonthlyCharges': [monthly_charges],
             'TotalCharges': [total_charges]
         })
 
