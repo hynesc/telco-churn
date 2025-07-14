@@ -62,7 +62,7 @@ def plot_feature_importance(model):
 
         # Create the plot
         fig, ax = plt.subplots(figsize=(12, 10))
-        sns.barplot(x='Importance', y='Feature', data=top_features, palette='coolwarm', ax=ax)
+        sns.barplot(x='Importance', y='Feature', data=top_features, ax=ax, hue='Feature', palette='coolwarm', legend=False)
         ax.set_title('Top Factors Influencing Churn', fontsize=16)
         ax.set_xlabel('Coefficient (Impact on Churn)', fontsize=12)
         ax.set_ylabel('Feature', fontsize=12)
