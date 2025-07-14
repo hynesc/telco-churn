@@ -48,36 +48,30 @@ The repository contains the following key files:
 
 To run this project on your local machine, follow these steps:
 
-**Step 1: Set up the Environment**
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/hynesc/telco-churn
+    cd telco-churn
+    ```
 
-Clone the repository and install the required packages using the `requirements.txt` file. It is highly recommended to use a virtual environment.
+2.  **Set Up a Virtual Environment** (Recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
+3.  **Install Dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Clone the repository
-git clone https://github.com/hynesc/telco-churn
-cd telco-churn
+4.  **Train the Model (Optional)**: A pre-trained `churn_model.joblib` is already included. However, if you wish to review the analysis or retrain the model yourself, you can run the `churn_model_training.ipynb` notebook in a Jupyter environment. The notebook will generate a new `churn_model.joblib` file.
 
-Create and activate a virtual environment (optional but recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows, use venv\Scripts\activate
-
-Install dependencies
-pip install -r requirements.txt
-
-
-**Step 2: Train the Model (Optional)**
-
-A pre-trained `churn_model.joblib` is already included. However, if you wish to review the analysis or retrain the model yourself, you can run the `churn_model_training.ipynb` notebook in a Jupyter environment. The notebook will generate a new `churn_model.joblib` file.
-
-**Step 3: Launch the Streamlit App**
-
-Run the following command in your terminal:
-
-
-streamlit run run.py
-
-
-Your web browser will automatically open with the interactive churn prediction dashboard.
+5.  **Launch the Streamlit App**:
+    ```bash
+    streamlit run run.py
+    ```
+    Your web browser will automatically open with the interactive churn prediction dashboard.
 
 ## 6. Deployment
 
