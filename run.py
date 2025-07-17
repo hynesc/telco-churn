@@ -36,7 +36,6 @@ def plot_feature_importance(model):
         classifier = model.named_steps['classifier']
 
         # Get the feature names from the preprocessor
-        # The transformers_ attribute holds the original column names
         num_features = preprocessor.transformers_[0][2]
         cat_features = preprocessor.transformers_[1][2]
         
@@ -62,8 +61,7 @@ def plot_feature_importance(model):
 
         # Create the plot
         fig, ax = plt.subplots(figsize=(12, 10))
-        reversed_palette = sns.color_palette("coolwarm", as_cmap=False)[::-1]
-        sns.barplot(x='Importance', y='Feature', data=top_features, ax=ax, hue='Feature', palette=reversed_palette, legend=False)
+        sns.barplot(x='Importance', y='Feature', data=top_features, ax=ax, hue='Feature', palette='coolwarm_r', legend=False)
         ax.set_title('Top Factors Influencing Churn', fontsize=16)
         ax.set_xlabel('Coefficient (Impact on Churn)', fontsize=12)
         ax.set_ylabel('Feature', fontsize=12)
