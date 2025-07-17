@@ -79,7 +79,7 @@ def plot_feature_importance(model):
 
 # --- UI Layout and Styling ---
 if model:
-    st.title("🚀 Customer Churn Prediction Dashboard")
+    st.title("📉 Customer Churn Prediction Dashboard")
     st.markdown("Enter a customer's details using the form below to get a real-time churn prediction. The model analyzes the customer's profile and services to estimate their likelihood of leaving.")
 
     col1, col2 = st.columns(2)
