@@ -7,6 +7,13 @@ This project demonstrates a complete machine learning workflow for predicting cu
 You can view the deployed interactive application here:
 **[https://telco-churn-analysis.streamlit.app/](https://telco-churn-analysis.streamlit.app/)**
 
+## Key Features
+
+-   **Interactive Prediction**: Use sliders and dropdowns to input customer data and receive a churn prediction.
+-   **Clear Results**: The app displays a clear, understandable prediction of whether a customer is likely to churn.
+-   **Prediction Confidence**: Shows the model's confidence score (probability) for each prediction.
+-   **Optimized Model**: Powered by a pruned logistic regression model that has been optimized through feature selection for efficiency and interpretability.
+
 ## 1. Problem Statement
 
 The goal of this project is to build a model that can predict which customers of a telecom company are most likely to "churn" (cancel their subscription). By identifying these at-risk customers, the business can proactively offer incentives or support to retain them, which is often more cost-effective than acquiring new customers.
